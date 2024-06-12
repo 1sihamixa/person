@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .person {
+      position: relative;
+      width: 100px;
+      height: 200px;
+      perspective: 800px;
+      transform-style: preserve-3d;
+    }
+
+    .head, .body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ffcc66;
+      transform-origin: center bottom;
+    }
+
+    .head {
+      border-radius: 50%;
+      transform: rotateX(45deg);
+    }
+
+    .body {
+      transform: translateY(50%) rotateX(-45deg);
+    }
+
+    .eye {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 50%;
+      top: 30%;
+      left: 30%;
+      transform: translateZ(50px); /* تحديد عمق العين */
+    }
+
+    .eye.right {
+      left: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="person">
+  <div class="head"></div>
+  <div class="body"></div>
+  <div class="eye"></div>
+  <div class="eye right"></div>
+</div>
+
+</body>
+</html>
